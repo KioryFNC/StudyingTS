@@ -1,7 +1,11 @@
 import { Button } from "../components/Button"
+import { Header } from "../components/Header"
 
 export function Home() {
   return (
-    <Button/>
+    <div>
+      <Header />
+      <Button />
+    </div>
   )
 }

@@ -1,5 +1,9 @@
+import * as Element from './styles'
+
 export function Button() {
   return (
-    <button>open</button>
+    <Element.Button>
+      <button>open</button>
+    </Element.Button>
   )
 }
