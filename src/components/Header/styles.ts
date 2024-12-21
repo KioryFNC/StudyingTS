@@ -10,14 +10,17 @@ export const Root = styled.div`
   overflow: hidden; 
   `;
 
-export const Links = styled.ul`
-  min-width: 100rem;
-  max-width: 100rem;
+export const Content = styled.div`
+  width: 50rem;
   display: flex; 
-  align-items: center; 
+  justify-content: space-between;
+  align-items: center;
+  `
+
+export const Navigation = styled.ul`
   justify-content: flex-start;
+  display: flex;
   color: ${(props) => props.theme['wine-500']};
-  margin-bottom: 5rem;
   gap: 2rem;
   
   li {
@@ -35,14 +38,11 @@ export const Links = styled.ul`
       color: ${(props) => props.theme['wine-300']};
     }
   }
-
-  li:last-child {
-    justify-content: flex-end;
-    right: 0;
-    top: 0;
-  }
-  
-  li:last-child svg {
-
-  }
 `;
+
+export const Links = styled.div`
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+`

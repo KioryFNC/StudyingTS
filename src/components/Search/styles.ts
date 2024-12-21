@@ -27,7 +27,7 @@ export const SearchModal = styled.div<{ isOpen:boolean }>`
   z-index: 3;
 
   input {
-    width: 15rem;
+    width: 18rem;
     padding: .8rem;
     font-size: 1.2rem;
     border-bottom: 2px solid ${(props) => props.theme['wine-700']};

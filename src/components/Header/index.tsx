@@ -5,14 +5,23 @@ import { FacebookLogo, InstagramLogo, TwitterLogo, WhatsappLogo, YoutubeLogo } f
 export function Header() {
   return (
     <Element.Root>
-      <Element.Links>
+
+      <Element.Content>
+
+        <Element.Navigation>
           <li><YoutubeLogo /></li>
           <li><FacebookLogo /></li>
           <li><WhatsappLogo /></li>
           <li><InstagramLogo /></li>
           <li><TwitterLogo /></li>
+        </Element.Navigation>    
+              
+        <Element.Links>
           <li><Search /></li>
-      </Element.Links>
+        </Element.Links>
+
+      </Element.Content>
+
     </Element.Root>
   )
 }
