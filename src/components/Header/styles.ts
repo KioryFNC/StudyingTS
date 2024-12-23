@@ -8,14 +8,20 @@ export const Root = styled.div`
   justify-content: center;
   background: ${(props) => props.theme['gray-500']};
   overflow: hidden; 
-  `;
+ 
+  >img {
+    width: 7rem;
+    height: 7rem;
+    margin-right: 6rem;
+  }
+  `
 
 export const Content = styled.div`
   width: 50rem;
   display: flex; 
   justify-content: space-between;
   align-items: center;
-  `
+`
 
 export const Navigation = styled.ul`
   justify-content: flex-start;
@@ -28,8 +34,12 @@ export const Navigation = styled.ul`
     font-size: 3rem;
     display: flex;
     align-items: center;
+    transition: transform 0.3s, ease-in-out;
+    &:hover {
+      transform: scale(0.9);
+    }
   }
-
+  
   svg {
     cursor: pointer;
     transition: color 0.3s;
@@ -40,9 +50,16 @@ export const Navigation = styled.ul`
   }
 `;
 
-export const Links = styled.div`
+export const Search = styled.div`
   list-style: none;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+`
+
+export const Menu = styled.ul`
+  li{
+    list-style: none;
+
+  }
 `

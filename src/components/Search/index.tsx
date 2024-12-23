@@ -24,7 +24,7 @@ export function Search() {
       </Element.SearchModal>
      
       <Element.Icon onClick={handleToggleSearch}>
-        {isOpen ? <X size={28}/> : <MagnifyingGlass size={28} />}
+        {searchTerm !== '' ? <MagnifyingGlass size={28} /> : isOpen ? <X size={28}/> : <MagnifyingGlass size={28} />}
       </Element.Icon>
     </Element.Root>
   )

@@ -4,6 +4,8 @@ export const Root = styled.div`
   position: relative;
   display: flex;
   align-items: center;
+
+ 
 `
 
 export const Icon = styled.div`
