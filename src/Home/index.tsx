@@ -1,11 +1,11 @@
-import { Button } from "../components/Button"
+import { Games } from "../components/Games"
 import { Header } from "../components/Header"
 
 export function Home() {
   return (
     <div>
       <Header />
-      <Button />
+      <Games />
     </div>
   )
 }
