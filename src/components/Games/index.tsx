@@ -11,7 +11,7 @@ export function Games() {
     news: [
       {
         id: 1,
-        name: 'Dark Souls',
+        name: 'Dark Souls', 
         img: back,
         link: 'https://store.steampowered.com/app/570940/DARK_SOULS_REMASTERED/'
       },
@@ -41,6 +41,12 @@ export function Games() {
       },
       {
         id: 6,
+        name: 'Dark Souls',
+        img: back,
+        link: 'https://store.steampowered.com/app/570940/DARK_SOULS_REMASTERED/'
+      },
+      {
+        id: 7,
         name: 'Dark Souls',
         img: back,
         link: 'https://store.steampowered.com/app/570940/DARK_SOULS_REMASTERED/'
