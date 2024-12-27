@@ -2,31 +2,36 @@ import styled from "styled-components";
 
 export const Root = styled.div`
   position: relative;
-  display: grid;
+  display: flex;
+  width: 100%;
+  min-height: 65rem;
+  margin-top: 4rem;
+  gap: 2rem;
+  padding-top: 2rem;
+  flex-direction: column;
   align-items: center;
-  justify-items: center;
   text-align: center;
   background: ${(props) => props.theme['gray-700']};
-  width: 100%;
-  height: 70rem;
 
   >h1 {
     font-family: 'Roboto', sans-serif;
     font-size: 3.5rem;
     color: #FFF;
     font-weight: 400;
+    margin-top: 2rem;
   }
 `
 
 export const Buttons = styled.button`
   width: fit-content;
   display: flex;
+  margin-bottom: 2rem;
+  gap: 1rem;
   justify-content: center;
   align-items: center;
   border: none;
   border-radius: 9999px;
   background: ${(props) => props.theme['gray-500']};
-  margin: 2rem 0;
   
   >button {
     background: ${(props) => props.theme['gray-500']};
@@ -56,19 +61,18 @@ export const Main = styled.div`
   width: 80%;
   max-width: 120rem;
   justify-content: center;
+  margin-bottom: 4rem;
+  flex-grow: 0;
 
-  &:hover > div {
+  &:has(div:hover) > div:not(:hover) {
     filter: blur(4px);
     transition: filter 0.2s ease-in-out;
   }
-  >div:hover {
-    filter:blur(0);
-  }
-
+  
   @media (min-width: 1200px) {
     grid-template-columns: repeat(6, 1fr);
   }
-`
+  `
 
 export const Card = styled.div`
   background: ${(props) => props.theme['gray-500']};
@@ -80,8 +84,10 @@ export const Card = styled.div`
   transition: filter 0.3s ease-in-out;
   
   &:hover {
+    filter:blur(0);
     transform: scale(1.05);
   }
+  
   a {
     display: block;
     text-decoration: none;
