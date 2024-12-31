@@ -65,7 +65,7 @@ export const Main = styled.div`
   flex-grow: 0;
 
   &:has(div:hover) > div:not(:hover) {
-    filter: blur(4px);
+    filter: blur(3px);
     transition: filter 0.2s ease-in-out;
   }
   

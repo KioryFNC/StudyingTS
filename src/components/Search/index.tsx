@@ -4,7 +4,7 @@ import { MagnifyingGlass, X } from '@phosphor-icons/react'
 
 export function Search() {
   const [isOpen, setIsOpen] = useState(false)
-  const [searchTerm, setSearchterm] = useState('')
+  const [searchTerm, setSearchTerm] = useState('')
 
   function handleToggleSearch() {
     if (searchTerm === '') {
@@ -19,7 +19,7 @@ export function Search() {
           type='text'
           placeholder='Digite sua pesquisa...'
           value={searchTerm}
-          onChange={(e) => setSearchterm(e.target.value)}
+          onChange={(e) => setSearchTerm(e.target.value)}
         />
       </Element.SearchModal>
      
