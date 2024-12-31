@@ -12,7 +12,8 @@ export const Root = styled.div`
   align-items: center;
   text-align: center;
   background: ${(props) => props.theme['gray-700']};
-
+  flex-grow: 1;
+  
   >h1 {
     font-family: 'Roboto', sans-serif;
     font-size: 3.5rem;

@@ -1,11 +1,14 @@
 import { Games } from "../components/Games"
+import { Grid } from "../components/Grid"
 import { Header } from "../components/Header"
+import * as Element from "./styles"
 
 export function Home() {
   return (
-    <div>
+    <Element.Root>
       <Header />
       <Games />
-    </div>
+      <Grid />
+    </Element.Root>
   )
 }

@@ -12,6 +12,25 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
 
     -webkit-font-smoothing: antialiased;
+
+    ::-webkit-scrollbar {
+      width: 12px; 
+      height: 12px; 
+    }
+
+    ::-webkit-scrollbar-track {
+      background: ${(props) => props.theme['gray-700']};
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: ${(props) => props.theme['wine-500']}; /* Cor da barra */
+      border-radius: 10px; /* Cantos arredondados */
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background:rgba(133, 35, 82, 0.86); 
+    }
+
   }
 
   body { 
@@ -20,7 +39,8 @@ export const GlobalStyle = createGlobalStyle`
     background: url(${background}) no-repeat center;
     background-size: cover;
     line-height: 1.6;
-    overflow: hidden;
+    overflow-x: hidden;
+    
   }
 
   body, input, textarea, button {

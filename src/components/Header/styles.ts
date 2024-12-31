@@ -7,14 +7,13 @@ export const Root = styled.div`
   align-items: center;
   justify-content: center;
   background: ${(props) => props.theme['gray-500']};
-  overflow: hidden; 
  
   >img {
     width: 7rem;
     height: 7rem;
     margin-right: 6rem;
   }
-  `
+`
 
 export const Content = styled.div`
   width: 100%;
