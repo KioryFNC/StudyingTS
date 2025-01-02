@@ -39,7 +39,7 @@ export const GlobalStyle = createGlobalStyle`
     background: url(${background}) no-repeat center;
     background-size: cover;
     line-height: 1.6;
-    overflow-x: auto;
+    overflow-x: hidden;
     
   }
 

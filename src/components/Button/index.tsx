@@ -20,7 +20,7 @@ export function Button() {
 
       {isOpen && (
         <Element.ModalOverlay>
-          <Element.ModalContent>
+          <Element.ModalContent className={isOpen ? 'open' : ''}>
             <h2>Conteúdo da Div</h2>
             <p>Texto ou outros componentes dentro da div</p>
             <button onClick={handleClose}>Fechar</button>

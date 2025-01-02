@@ -23,12 +23,28 @@ export const Title = styled.div`
   justify-content: center;
   >h1 {
     font-size: 6rem;
+    position: relative;
+    z-index: 1;
     >span {
       background: linear-gradient(90deg,rgb(240, 67, 139) 0%, #8b5cf6 100%);
       background-clip: text;
       -webkit-background-clip: text; /* Aplica o gradiente apenas ao texto */
       -webkit-text-fill-color: transparent;
     }
+  }
+
+  >h1::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 35rem;
+    height: 35rem;
+    background: rgba(255, 255, 255, 0.09);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(4rem);
+    z-index: 0;
   }
 `
 export const Grid = styled.div`
@@ -99,6 +115,9 @@ export const Card3 = styled(CardBase)`
 export const Card4 = styled(CardBase)`
   grid-column: span 2;
   grid-row: 2;
+  &:hover img {
+    transform: scale(1.02);
+  }
 `
 export const Card5 = styled(CardBase)`
   grid-column: span 1;
