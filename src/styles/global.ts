@@ -14,8 +14,8 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
 
     ::-webkit-scrollbar {
-      width: 12px; 
-      height: 12px; 
+      width: 10px; 
+      height: 10px; 
     }
 
     ::-webkit-scrollbar-track {
@@ -39,7 +39,7 @@ export const GlobalStyle = createGlobalStyle`
     background: url(${background}) no-repeat center;
     background-size: cover;
     line-height: 1.6;
-    overflow-x: hidden;
+    overflow-x: auto;
     
   }
 

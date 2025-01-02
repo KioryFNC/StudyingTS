@@ -14,24 +14,93 @@ export const Root = styled.div`
   flex-grow: 1;
 `
 export const Title = styled.div`
-  font-size: 3rem;
   width: 51rem;
+  height: auto;
+  margin: 4rem 0 ;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  >h1 {
+    font-size: 6rem;
+    >span {
+      background: linear-gradient(90deg,rgb(240, 67, 139) 0%, #8b5cf6 100%);
+      background-clip: text;
+      -webkit-background-clip: text; /* Aplica o gradiente apenas ao texto */
+      -webkit-text-fill-color: transparent;
+    }
+  }
 `
 export const Grid = styled.div`
+  max-width: 100rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 1.6rem;
+  padding: 1.6rem;
 
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `
-export const Card1 = styled.div`
 
+const CardBase = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  padding: 1.6rem;
+  border-radius: 8px;
+  background: transparent;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  >img {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  >strong {
+    margin: 1.2rem 0 .8rem;
+    font-size: 1.6rem;
+  }
+
+  >p {
+    font-size: 1.4rem;
+    color: #ccc;
+  }
+
+  >strong, p, img {
+    transition: transform 0.3s ease-in-out;
+    display: block;
+  }
+
+  &:hover strong {
+    transform: translateX(1rem);
+  }
+  &:hover p {
+    transform: translateX(1rem);
+  }
+  &:hover img {
+    transform: scale(1.05);
+  }
 `
-export const Card2 = styled.div`
-
+export const Card1 = styled(CardBase)`
+  grid-column: span 1;
 `
-export const Card3 = styled.div`
-
+export const Card2 = styled(CardBase)`
+  grid-column: span 1;
 `
-export const Card4 = styled.div`
-
+export const Card3 = styled(CardBase)`
+  grid-column: span 1;
 `
-export const Card5 = styled.div`
-
+export const Card4 = styled(CardBase)`
+  grid-column: span 2;
+  grid-row: 2;
+`
+export const Card5 = styled(CardBase)`
+  grid-column: span 1;
+  grid-row: 2;
 `

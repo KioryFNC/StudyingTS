@@ -1,20 +1,32 @@
 import styled from "styled-components" 
 
 export const Button = styled.button`
-  button {
-  background: linear-gradient(
-    90deg,
-    ${(props) => props.theme['wine-300']} 0%,
-    ${(props) => props.theme['wine-700']} 100%
-  );
-  -webkit-background-clip: text;
+ background: linear-gradient(90deg, rgb(240, 67, 139) 0%, #8b5cf6 100%);
   background-clip: text;
-  font-size: 6rem;
-  border: none;
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
+  
+  font-size: 3rem;
+  font-weight: bold;
+  border: 2px solid transparent;
   border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  padding: 1.2rem 2.4rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  text-transform: uppercase;
+
+  &:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4); 
+  }
+
+  &:active {
+    transform: scale(0.98); 
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(240, 67, 139, 0.6);
+  }
 
 `
