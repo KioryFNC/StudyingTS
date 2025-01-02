@@ -2,11 +2,11 @@ import styled from "styled-components"
 
 export const Button = styled.button`
   font-size: 3rem;
+  cursor: pointer;
   font-weight: bold;
   border: 2px solid transparent;
   border-radius: 8px;
   padding: 1.2rem 2.4rem;
-  cursor: pointer;
   text-transform: uppercase;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   background: linear-gradient(90deg, rgb(240, 67, 139) 0%, #8b5cf6 100%);
@@ -70,18 +70,31 @@ export const ModalContent = styled.div`
   >button {
     margin:  auto 0 0 auto;
     text-transform: uppercase;
-    font-weight: 500;
     font-size: 2rem;
-    padding: 1rem 2rem;
-    border: none;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 1.2rem 2.4rem;
+    text-transform: uppercase;
     cursor: pointer;
-    border-radius: 5rem;
-    transition: background-color 0.3s, ease-in-out;
-    background: linear-gradient(90deg,rgb(240, 67, 139) 0%, #8b5cf6 100%);
-    
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    background: linear-gradient(90deg, rgb(240, 67, 139) 0%, #8b5cf6 100%);
+    background-clip: text;
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+
     &:hover {
-      transform: scale(1.1);
-      background: linear-gradient(90deg, #8b5cf6 0%,rgb(240, 67, 139) 100%);
+      transform: scale(1.05); 
+      box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4); 
+    }
+
+    &:active {
+      transform: scale(0.98); 
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 8px rgba(240, 67, 139, 0.6);
     }
   }
 `
