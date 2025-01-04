@@ -9,6 +9,9 @@ export function Search() {
   function handleToggleSearch() {
     if (searchTerm === '') {
       setIsOpen((prev) => !prev)
+    } else {
+      setSearchTerm('')
+      setIsOpen(false)
     }
   }
   return (
