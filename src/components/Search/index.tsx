@@ -14,7 +14,7 @@ export function Search() {
   return (
     <Element.Root>
 
-      <Element.SearchModal isOpen={isOpen}>
+      <Element.SearchModal $isOpen={isOpen}>
         <input
           type='text'
           placeholder='Digite sua pesquisa...'

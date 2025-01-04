@@ -23,7 +23,7 @@ export const Root = styled.div`
   }
 `
 
-export const Buttons = styled.button`
+export const Buttons = styled.div`
   width: fit-content;
   display: flex;
   margin-bottom: 2rem;

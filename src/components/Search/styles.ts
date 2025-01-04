@@ -20,10 +20,10 @@ export const Icon = styled.div`
   }
 `
 
-export const SearchModal = styled.div<{ isOpen:boolean }>`
+export const SearchModal = styled.div<{ $isOpen:boolean }>`
   position: relative;
   background: transparent;
-  display: ${(props) => (props.isOpen ? 'flex' : 'none')};
+  display: ${(props) => (props.$isOpen ? 'flex' : 'none')};
   flex-direction: column;
   align-items: center;
   z-index: 3;

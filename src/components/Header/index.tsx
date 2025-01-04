@@ -8,6 +8,7 @@ export function Header() {
     <Element.Root>
       <img src={logo} alt="" />
       <Element.Container>
+        
         <Element.Content>
           <Element.Navigation>
             <li><YoutubeLogo /></li>
@@ -21,6 +22,7 @@ export function Header() {
             <li><Search /></li>
           </Element.Search>
         </Element.Content>
+
         <Element.Menu>
           <li>Noticias</li>
           <li>Reviews</li>

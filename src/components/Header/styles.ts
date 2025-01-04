@@ -12,6 +12,7 @@ export const Root = styled.div`
     width: 7rem;
     height: 7rem;
     margin-right: 6rem;
+    z-index: 1;
   }
 `
 
