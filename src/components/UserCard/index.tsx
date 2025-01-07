@@ -22,11 +22,11 @@ export function UserCard({id, name, nickName, profession, age, balance, phone, i
       </Element.CardHeader>
       <Element.CardBody>
         <Element.CardItem><strong>ID:</strong> {id}</Element.CardItem>
-        <Element.CardItem><strong>Nome:</strong> {name}</Element.CardItem>
         <Element.CardItem><strong>Profissão</strong> {profession}</Element.CardItem>
+        <Element.CardItem><strong>Nome:</strong> {name}</Element.CardItem>
+        <Element.CardItem><strong>Telefone:</strong> {phone}</Element.CardItem>
         <Element.CardItem><strong>Idade:</strong> {age}</Element.CardItem>
         <Element.CardItem><strong>Saldo:</strong> {balance}</Element.CardItem>
-        <Element.CardItem><strong>Telefone:</strong> {phone}</Element.CardItem>
       </Element.CardBody>
     </Element.Root>
   )

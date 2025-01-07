@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
 export const Root = styled.div`
-  width: 60rem;
-  height: 25rem;
+  max-width: 60rem;
+  width: 100%;
+  height: auto;
   display: flex;
+  margin: 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background: #fff;
@@ -36,18 +38,18 @@ export const ProfileImage = styled.img`
 `
 export const CardBody = styled.div`
   display: grid;
+  width: 100%;
   grid-template-columns: repeat(2, 1fr);
-  gap: .8rem;
+  gap: 1rem;
   padding: 2rem;
   background: linear-gradient( 90deg,  #8b5cf6 0%, rgba(240, 67, 139) 100%);
   border-radius: 0 8px 8px 0;
 `
 
 export const CardItem = styled.p`
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: #FFF;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  padding-bottom: .5rem;
   margin-bottom: .5rem;
   >strong {
     color: #000;
