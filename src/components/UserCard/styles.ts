@@ -1,19 +1,28 @@
 import styled from "styled-components";
 
 export const Root = styled.div`
+  position: absolute;
   max-width: 60rem;
   width: 100%;
   height: auto;
   display: flex;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
   margin: 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background: #fff;
   overflow: hidden;
   font-family: 'Roboto', sans-serif;
+  z-index: 3;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 `
 export const CardHeader = styled.div`
   display: flex;
+  padding: 20rem;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
@@ -35,6 +44,11 @@ export const ProfileImage = styled.img`
   border-radius: 8px;
   object-fit: cover;
   margin-top: 1rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
 `
 export const CardBody = styled.div`
   display: grid;
