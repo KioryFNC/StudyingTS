@@ -18,7 +18,7 @@ export function UserCard({id, name, nickName, profession, age, balance, phone, i
         <Element.ProfileImage 
           src={imageUrl || 'https://via.placeholder.com/150'}
         />
-        <h2>{nickName}</h2>
+          <h2>{nickName}</h2>
       </Element.CardHeader>
       <Element.CardBody>
         <Element.CardItem><strong>ID:</strong> {id}</Element.CardItem>
