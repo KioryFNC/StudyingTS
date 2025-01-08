@@ -19,14 +19,17 @@ export const Icon = styled.div`
 `
 
 export const SearchModal = styled.div<{ $isOpen:boolean }>`
-  position: relative;
+  position: absolute;
   background: transparent;
   display: ${(props) => (props.$isOpen ? 'flex' : 'none')};
   flex-direction: column;
   align-items: center;
   z-index: 3;
-  right: 0;
-  top: 50%;
+  left: 0; /* Alinha à direita */
+  top: 50%; /* Centraliza verticalmente, se necessário */
+  transform: translateY(-50%); /* Ajusta o alinhamento vertical */
+  margin-left: 3rem; /* Ajuste de distância da borda direita */
+
   
 
   input {

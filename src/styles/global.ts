@@ -14,8 +14,8 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
 
     ::-webkit-scrollbar {
-      width: 10px; 
-      height: 10px; 
+      width: 8px; 
+      height: 8px; 
     }
 
     ::-webkit-scrollbar-track {
@@ -28,7 +28,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     ::-webkit-scrollbar-thumb:hover {
-      background:rgba(133, 35, 82, 0.86); 
+      background:rgba(133, 35, 82, 0.88); 
     }
 
   }

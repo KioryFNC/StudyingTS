@@ -6,45 +6,52 @@ export const Root = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
+  padding: 0 2rem;
   background: ${(props) => props.theme['gray-500']};
   font-family: 'Roboto', sans-serif;
 
-  @media (min-width: 1000px) {
+  @media (min-width: 950px) {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    height: 10rem;
   }
 `
 
 export const HeaderContent = styled.div`
-  width: fit-content;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  padding: 0.5rem;
+  gap: 1rem;
 
+  @media (min-width: 950px) {
+    gap: 3rem;
+    max-width: 1300px;
+  }
 `
 
 // LOGO
 export const Logo = styled.img`
-  width: 7rem;
-  height: 7rem;
   margin: 1rem;
   z-index: 2;
+  
+  @media (min-width: 950px) {
+    width: 10rem;
+    height: 10rem;
+    margin-right: 2rem;
+  }
 `
 
-// CONTAINER GERAL
-export const Container = styled.div`
+export const NavSearch = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 1rem;
-
-  @media (min-width: 1000px) {
+  width: 100%;
+  
+  @media (min-width: 950px) {
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
   }
 `
 
@@ -55,7 +62,7 @@ export const Navigation = styled.ul`
   color: ${(props) => props.theme['wine-500']};
 
   li {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
 
@@ -63,54 +70,59 @@ export const Navigation = styled.ul`
       transform: scale(0.9);
     }
   }
-
-  
 `
 
 // SEARCH
 export const Search = styled.div`
   display: flex;
   align-items: center;
-  margin-left: auto;
+  margin-right: auto;
 
   @media (min-width: 600px) {
+    right: 0;
   }
 `
 
 // MENU DESKTOP
 export const Menu = styled.ul`
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
+  width: 100%;
+  display: none;
+  justify-content: space-between;
+  gap: 1.5rem;
   color: #FFF;
-  margin-top: 1rem;
 
   li {
     cursor: pointer;
     font-size: 1.5rem;
     position: relative;
-    padding: .5rem 0;
-  }
+    transition: transform 0.3s ease-in-out;
+    border-bottom: 4px solid transparent;
 
-  @media (max-width: 1000px) {
-    display: none; /* Some em telas médias e menores */
+    &:hover {
+      transform: scale(1.1);
+      border-bottom: 4px solid ${(props) => props.theme['wine-500']};
+    }
+  }
+  
+  @media (min-width: 950px) {
+    display: flex;
   }
 `
 
 // HAMBURGER MENU
 export const Hamburger = styled.div`
-  display: none;
+  display: flex;
   cursor: pointer;
   z-index: 3;
   position: relative;
   display: flex;
   align-items: center;
   margin-right: auto;
-  
   color: ${(props) => props.theme['wine-500']};
+  
 
-  @media (max-width: 1000px) {
-    display: flex;
+  @media (min-width: 950px) {
+    display: none;
   }
 `
 

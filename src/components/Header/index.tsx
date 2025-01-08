@@ -9,62 +9,62 @@ export function Header() {
 
   return (
     <Element.Root>
-      <Element.HeaderContent>
+        {/* LOGO */}
+        <Element.Logo src={logo} alt="Logo" />
+        <Element.HeaderContent>
 
-      
-      {/* LOGO */}
-      <Element.Logo src={logo} alt="Logo" />
+        {/* HAMBURGER */}
+        <Element.Hamburger onClick={() => setMenuOpen(!menuOpen)}>
+          <List size={32} />
+        </Element.Hamburger>
 
-      {/* HAMBURGER */}
-      <Element.Hamburger onClick={() => setMenuOpen(!menuOpen)}>
-        <List size={32} />
-      </Element.Hamburger>
+        <Element.NavSearch>
+          <Element.Search>
+            <Search />
+          </Element.Search>
+          {/* NAVIGATION - Ícones sociais */}
+          <Element.Navigation>
+            <li><YoutubeLogo /></li>
+            <li><FacebookLogo /></li>
+            <li><WhatsappLogo /></li>
+            <li><InstagramLogo /></li>
+            <li><TwitterLogo /></li>
+          </Element.Navigation>
+        </Element.NavSearch>
 
-      <Element.Search>
-        <Search />
-      </Element.Search>
-      {/* NAVIGATION - Ícones sociais */}
-      <Element.Navigation>
-        <li><YoutubeLogo /></li>
-        <li><FacebookLogo /></li>
-        <li><WhatsappLogo /></li>
-        <li><InstagramLogo /></li>
-        <li><TwitterLogo /></li>
-      </Element.Navigation>
+        {/* SEARCH */}
 
-      {/* SEARCH */}
+        {/* MENU DESKTOP */}
+        <Element.Menu>
+          <li>Noticias</li>
+          <li>Reviews</li>
+          <li>Games</li>
+          <li>Esports</li>
+          <li>Cultura pop</li>
+          <li>Low games</li>
+          <li>Especiais</li>
+          <li>Flow cards</li>
+          <li>Flow store</li>
+          <li>Flow ping</li>
+        </Element.Menu>
 
-      {/* MENU DESKTOP */}
-      <Element.Menu>
+        {/* FUNDO AO ABRIR MOBILE MENU */}
+        <Element.Backdrop $isOpen={menuOpen} onClick={() => setMenuOpen(false)} />
+
+        {/* MOBILE MENU */}
+        <Element.MobileMenu $isOpen={menuOpen}>
         <li>Noticias</li>
-        <li>Reviews</li>
-        <li>Games</li>
-        <li>Esports</li>
-        <li>Cultura pop</li>
-        <li>Low games</li>
-        <li>Especiais</li>
-        <li>Flow cards</li>
-        <li>Flow store</li>
-        <li>Flow ping</li>
-      </Element.Menu>
-
-      {/* FUNDO AO ABRIR MOBILE MENU */}
-      <Element.Backdrop $isOpen={menuOpen} onClick={() => setMenuOpen(false)} />
-
-      {/* MOBILE MENU */}
-      <Element.MobileMenu $isOpen={menuOpen}>
-      <li>Noticias</li>
-        <li>Reviews</li>
-        <li>Games</li>
-        <li>Esports</li>
-        <li>Cultura pop</li>
-        <li>Low games</li>
-        <li>Especiais</li>
-        <li>Flow cards</li>
-        <li>Flow store</li>
-        <li>Flow ping</li>
-      </Element.MobileMenu>
-      </Element.HeaderContent>
+          <li>Reviews</li>
+          <li>Games</li>
+          <li>Esports</li>
+          <li>Cultura pop</li>
+          <li>Low games</li>
+          <li>Especiais</li>
+          <li>Flow cards</li>
+          <li>Flow store</li>
+          <li>Flow ping</li>
+        </Element.MobileMenu>
+        </Element.HeaderContent>
     </Element.Root>
   )
 }
