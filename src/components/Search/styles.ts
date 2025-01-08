@@ -4,8 +4,6 @@ export const Root = styled.div`
   position: relative;
   display: flex;
   align-items: center;
-
- 
 `
 
 export const Icon = styled.div`
@@ -27,12 +25,14 @@ export const SearchModal = styled.div<{ $isOpen:boolean }>`
   flex-direction: column;
   align-items: center;
   z-index: 3;
+  right: 0;
+  top: 50%;
+  
 
   input {
     width: 18rem;
     padding: .8rem;
     font-size: 1.2rem;
-    border-bottom: 2px solid ${(props) => props.theme['wine-700']};
     border-radius: .8rem;
     outline: none;
     background: transparent;

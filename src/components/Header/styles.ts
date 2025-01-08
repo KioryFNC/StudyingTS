@@ -1,110 +1,169 @@
 import styled from "styled-components";
 
+// ROOT - Estrutura principal do Header
 export const Root = styled.div`
-  width: 100vw;
-  height: 10rem; 
+  width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  padding: 1rem;
   background: ${(props) => props.theme['gray-500']};
- 
-  >img {
-    width: 7rem;
-    height: 7rem;
-    margin-right: 6rem;
-    z-index: 1;
+  font-family: 'Roboto', sans-serif;
+
+  @media (min-width: 1000px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 10rem;
   }
 `
 
-export const Content = styled.div`
-  width: 100%;
-  max-width: 120rem;
-  margin: 0 auto;
-  display: flex; 
-  justify-content: space-between;
+export const HeaderContent = styled.div`
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  padding: 1rem 0;
+
 `
 
-export const Navigation = styled.ul`
-  justify-content: flex-start;
+// LOGO
+export const Logo = styled.img`
+  width: 7rem;
+  height: 7rem;
+  margin: 1rem;
+  z-index: 2;
+`
+
+// CONTAINER GERAL
+export const Container = styled.div`
   display: flex;
-  color: ${(props) => props.theme['wine-500']};
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  @media (min-width: 1000px) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+`
+
+// NAVIGATION - Ícones sociais
+export const Navigation = styled.ul`
+  display: flex;
   gap: 2rem;
-  
+  color: ${(props) => props.theme['wine-500']};
+
   li {
-    font-size: 3rem;
-    display: flex;
-    align-items: center;
-    transition: transform 0.3s, ease-in-out;
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+
     &:hover {
       transform: scale(0.9);
     }
   }
+
   
-  svg {
-    cursor: pointer;
-    transition: color 0.3s;
-
-    &:hover {
-      color: ${(props) => props.theme['wine-300']};
-    }
-  }
-`;
-
-export const Search = styled.div`
-  list-style: none;
-  display: flex;
-  justify-content: flex-end;
-  margin-left: auto;
-  align-items: center;
 `
 
+// SEARCH
+export const Search = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
+  @media (min-width: 600px) {
+  }
+`
+
+// MENU DESKTOP
 export const Menu = styled.ul`
-  width: 100%;
-  max-width: 120rem;
-  margin: 0 auto;
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 2rem;
-  
-  >li {
-    position: relative;
-    color: #FFF;
+  color: #FFF;
+  margin-top: 1rem;
+
+  li {
     cursor: pointer;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
     font-size: 1.5rem;
+    position: relative;
     padding: .5rem 0;
-    overflow: hidden;
   }
 
-  >li::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background-color: ${(props) => props.theme['wine-500']};
-    transform: translateY(100%);
-    transition: width 0.3 ease-in-out;
+  @media (max-width: 1000px) {
+    display: none; /* Some em telas médias e menores */
   }
+`
 
-  >li:hover::after {
-    width: 100%;
-    transform: translateY(0);
+// HAMBURGER MENU
+export const Hamburger = styled.div`
+  display: none;
+  cursor: pointer;
+  z-index: 3;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  
+  color: ${(props) => props.theme['wine-500']};
+
+  @media (max-width: 1000px) {
+    display: flex;
   }
+`
 
-  `
+// MOBILE MENU
+interface MobileMenuProps {
+  $isOpen: boolean;
+}
 
-export const Container = styled.div`
+export const MobileMenu = styled.ul<MobileMenuProps>`
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  position: fixed;
+  top: 0;
+  right: ${({ $isOpen }) => ($isOpen ? '0' : '-100%')};
+  width: 60%;
+  height: 100%;
+  background: ${(props) => props.theme['gray-800']};
+  padding: 4rem 2rem;
+  transition: right 0.3s ease-in-out;
+  z-index: 10;
 
-  :last-child{
-    bottom: 0;
+  li {
+    color: #FFF;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid ${(props) => props.theme['wine-500']};
+
+    &:last-child {
+      border: none;
+    }
   }
+
+  @media (max-width: 600px) {
+    gap: 1rem;
+
+    li {
+      font-size: 1.3rem;
+    }
+  }
+`
+
+// FUNDO CINZA AO ABRIR MOBILE MENU
+interface BackdropProps {
+  $isOpen: boolean;
+}
+
+export const Backdrop = styled.div<BackdropProps>`
+  display: ${({ $isOpen }) => ($isOpen ? 'block' : 'none')};
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9;
 `
