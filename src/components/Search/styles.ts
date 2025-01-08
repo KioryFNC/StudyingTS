@@ -12,7 +12,7 @@ export const Icon = styled.div`
   display: flex;
   align-items: center;
   color: ${(props) => props.theme['wine-500']};
-
+  
   &:hover {
     color: ${(props) => props.theme['wine-300']};
   }

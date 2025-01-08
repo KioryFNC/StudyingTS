@@ -13,7 +13,7 @@ export const Root = styled.div`
   @media (min-width: 950px) {
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 `
 
@@ -27,7 +27,7 @@ export const HeaderContent = styled.div`
 
   @media (min-width: 950px) {
     gap: 3rem;
-    max-width: 1300px;
+    max-width: 1600px;
   }
 `
 
@@ -70,6 +70,13 @@ export const Navigation = styled.ul`
       transform: scale(0.9);
     }
   }
+
+    @media (min-width: 950px) {
+      gap: 3rem;
+      li{
+        font-size: 3.5rem;
+    }
+  }
 `
 
 // SEARCH
@@ -78,9 +85,6 @@ export const Search = styled.div`
   align-items: center;
   margin-right: auto;
 
-  @media (min-width: 600px) {
-    right: 0;
-  }
 `
 
 // MENU DESKTOP
