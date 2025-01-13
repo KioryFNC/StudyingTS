@@ -1,18 +1,18 @@
 import styled from 'styled-components';
 
 interface RootProps {
-  $isExpanded: boolean;
+  $isOpen: boolean;
 }
 
 export const Root = styled.div<RootProps>`
   position: absolute;
-  max-width: ${({ $isExpanded }) => ($isExpanded ? '60rem' : '20rem')};
+  max-width: ${({ $isOpen }) => ($isOpen ? '60rem' : '20rem')};
   width: 100%;
   height: auto;
   display: flex;
   top: 50%;
-  right: ${({ $isExpanded }) => ($isExpanded ? '0' : '1rem')}; 
-  flex-direction: ${({ $isExpanded }) => ($isExpanded ? 'row' : 'column')};
+  right: ${({ $isOpen }) => ($isOpen ? '0' : '1rem')}; 
+  flex-direction: ${({ $isOpen }) => ($isOpen ? 'row' : 'column')};
   transform: translateY(-50%);
   margin: 2rem;
   border-radius: 8px;

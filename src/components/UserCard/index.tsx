@@ -13,23 +13,23 @@ interface UserCardProps {
 }
 
 export function UserCard({ id, name, nickName, profession, age, balance, phone, imageUrl }: UserCardProps) {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleToggleCard = () => {
-    setIsExpanded((prev) => !prev);
+    setIsOpen((prev) => !prev);
   };
 
   return (
-    <Element.Root $isExpanded={isExpanded}>
-      <Element.CardHeader onClick={!isExpanded ? handleToggleCard : undefined}>
+    <Element.Root $isOpen={isOpen}>
+      <Element.CardHeader onClick={!isOpen ? handleToggleCard : undefined}>
         <Element.ProfileImage src={imageUrl || 'https://via.placeholder.com/150'} />
         <h2>{nickName}</h2>
-        {isExpanded && (
+        {isOpen && (
           <Element.CloseButton onClick={handleToggleCard}>X</Element.CloseButton>
         )}
       </Element.CardHeader>
 
-      {isExpanded && (
+      {isOpen && (
         <Element.CardBody>
           <Element.CardItem><strong>ID:</strong> {id}</Element.CardItem>
           <Element.CardItem><strong>Profissão:</strong> {profession}</Element.CardItem>
