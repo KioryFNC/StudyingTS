@@ -1,6 +1,5 @@
 import { Games } from "../components/Games"
 import { Grid } from "../components/Grid"
-import { Header } from "../components/Header"
 import { UserCard } from "../components/UserCard"
 import * as Element from "./styles"
 
@@ -17,7 +16,6 @@ export function Home() {
         phone="(11)91234-5678"
         imageUrl="https://github.com/KioryFNC.png"
       />
-      <Header />
       <Games />
       <Grid />
     </Element.Root>
