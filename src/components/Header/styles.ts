@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 // ROOT - Estrutura principal do Header
 export const Root = styled.div`
+  position: static;
+  top: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -9,6 +11,7 @@ export const Root = styled.div`
   padding: 0 2rem;
   background: ${(props) => props.theme['gray-500']};
   font-family: 'Roboto', sans-serif;
+  z-index: 9;
 
   @media (min-width: 950px) {
     flex-direction: row;

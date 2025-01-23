@@ -23,8 +23,8 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     ::-webkit-scrollbar-thumb {
-      background: ${(props) => props.theme['wine-500']}; /* Cor da barra */
-      border-radius: 10px; /* Cantos arredondados */
+      background: ${(props) => props.theme['wine-500']};
+      border-radius: 10px; 
     }
 
     ::-webkit-scrollbar-thumb:hover {
@@ -34,8 +34,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body { 
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background: url(${background}) no-repeat center;
     background-size: cover;
     line-height: 1.6;

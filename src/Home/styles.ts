@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 export const Root = styled.div`
-  min-height: 100vh; 
   display: flex;
   flex-direction: column;
+  width: 100%;
+  min-height: 100%; 
   overflow-y: auto;
+  
 `
