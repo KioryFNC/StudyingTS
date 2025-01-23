@@ -28,7 +28,7 @@ export const Title = styled.div`
     >span {
       background: linear-gradient(90deg,rgb(240, 67, 139) 0%, #8b5cf6 100%);
       background-clip: text;
-      -webkit-background-clip: text; /* Aplica o gradiente apenas ao texto */
+      -webkit-background-clip: text; /* Aplica o gradiente apenas ao texto mas tem que usar a função em baixo tambem */
       -webkit-text-fill-color: transparent;
     }
   }
@@ -51,11 +51,10 @@ export const Grid = styled.div`
   max-width: 100rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto;
   gap: 1.6rem;
   padding: 1.6rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     grid-template-columns: 1fr;
   }
 `
@@ -105,21 +104,42 @@ const CardBase = styled.div`
 `
 export const Card1 = styled(CardBase)`
   grid-column: span 1;
+  
+  @media (max-width: 600px) {
+    grid-column: span 1;
+  }
 `
 export const Card2 = styled(CardBase)`
   grid-column: span 1;
+  
+  @media (max-width: 600px) {
+    grid-column: span 1;
+  }
 `
 export const Card3 = styled(CardBase)`
   grid-column: span 1;
+  
+  @media (max-width: 600px) {
+    grid-column: span 1;
+  }
 `
 export const Card4 = styled(CardBase)`
   grid-column: span 2;
   grid-row: 2;
+
   &:hover img {
     transform: scale(1.02);
+  }
+  
+  @media (max-width: 600px) {
+    grid-column: span 1;
   }
 `
 export const Card5 = styled(CardBase)`
   grid-column: span 1;
-  grid-row: 2;
+  grid-row: 1;
+  
+  @media (max-width: 600px) {
+    grid-column: span 1;
+  }
 `
