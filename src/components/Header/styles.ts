@@ -73,7 +73,8 @@ export const Navigation = styled.ul`
 
     @media (min-width: 950px) {
       gap: 3rem;
-      li{
+
+      li {
         font-size: 3.5rem;
     }
   }
@@ -95,16 +96,25 @@ export const Menu = styled.ul`
   gap: 1.5rem;
   color: #FFF;
 
-  li {
-    cursor: pointer;
+  a {
     font-size: 1.5rem;
     position: relative;
+    cursor: pointer;
+    color: #FFF;
+    text-decoration: none;
+    padding: 0.5rem 0;
     transition: transform 0.3s ease-in-out;
     border-bottom: 4px solid transparent;
 
+    &.active {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: ${(props) => props.theme['white']};
+      border-bottom: 4px solid ${(props) => props.theme['wine-500']};
+    }
+
     &:hover {
       transform: scale(1.1);
-      border-bottom: 4px solid ${(props) => props.theme['wine-500']};
     }
   }
   
@@ -140,35 +150,37 @@ export const MobileMenu = styled.ul<MobileMenuProps>`
   flex-direction: column;
   position: fixed;
   top: 0;
-  right: ${({ $isOpen }) => ($isOpen ? '0' : '-100%')};
-  width: 60%;
-  height: 100%;
+  left: ${({ $isOpen }) => ($isOpen ? '0' : '100%')};
   background: ${(props) => props.theme['gray-800']};
   padding: 4rem 2rem;
-  transition: right 0.3s ease-in-out;
+  gap: .5rem;
+  transition: left 0.3s ease-in-out;
   z-index: 10;
 
-  li {
+  a {
+    text-decoration: none;
     color: #FFF;
     font-size: 1.5rem;
-    padding: 1rem 0;
     border-bottom: 1px solid ${(props) => props.theme['wine-500']};
+    transition: font-size 0.3s, color 0.3s;
 
     &:last-child {
       border: none;
     }
-  }
 
-  @media (max-width: 600px) {
-    gap: 1rem;
+    &:hover {
+      color: ${(props) => props.theme['wine-500']};
+    }
 
-    li {
-      font-size: 1.3rem;
+    &.active {
+      font-size: 1.7rem;
+      font-weight: bold;
+      color: ${(props) => props.theme['white']};
+      border-bottom: 4px solid ${(props) => props.theme['wine-500']};
     }
   }
 `
 
-// FUNDO CINZA AO ABRIR MOBILE MENU
 interface BackdropProps {
   $isOpen: boolean;
 }

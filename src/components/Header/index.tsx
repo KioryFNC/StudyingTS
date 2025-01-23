@@ -3,17 +3,16 @@ import * as Element from './styles'
 import { FacebookLogo, InstagramLogo, TwitterLogo, WhatsappLogo, YoutubeLogo, List } from '@phosphor-icons/react'
 import logo from '../../assets/logo.png'
 import { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
     <Element.Root>
-        {/* LOGO */}
         <Element.Logo src={logo} alt="Logo" />
         <Element.HeaderContent>
 
-        {/* HAMBURGER */}
         <Element.Hamburger onClick={() => setMenuOpen(!menuOpen)}>
           <List size={32} />
         </Element.Hamburger>
@@ -22,7 +21,6 @@ export function Header() {
           <Element.Search>
             <Search />
           </Element.Search>
-          {/* NAVIGATION - Ícones sociais */}
           <Element.Navigation>
             <li><YoutubeLogo /></li>
             <li><FacebookLogo /></li>
@@ -32,37 +30,73 @@ export function Header() {
           </Element.Navigation>
         </Element.NavSearch>
 
-        {/* SEARCH */}
 
-        {/* MENU DESKTOP */}
         <Element.Menu>
-          <li>Noticias</li>
-          <li>Reviews</li>
-          <li>Games</li>
-          <li>Esports</li>
-          <li>Cultura pop</li>
-          <li>Low games</li>
-          <li>Especiais</li>
-          <li>Flow cards</li>
-          <li>Flow store</li>
-          <li>Flow ping</li>
+          <li>
+            <NavLink to="/" onClick={() => setMenuOpen(false)}>Menu</NavLink>
+          </li>
+          <li>
+            <NavLink to="/tabela" onClick={() => setMenuOpen(false)}>Tabela</NavLink>
+          </li>
+          <li>
+            <NavLink to="/none" onClick={() => setMenuOpen(false)}>Games</NavLink>
+          </li>
+          <li>
+            <NavLink to="/none" onClick={() => setMenuOpen(false)}>Esports</NavLink>
+          </li>
+          <li>
+            <NavLink to="/none" onClick={() => setMenuOpen(false)}>Cultura pop</NavLink>
+          </li>
+          <li>
+            <NavLink to="/none" onClick={() => setMenuOpen(false)}>Low games</NavLink>
+          </li>
+          <li>
+            <NavLink to="/none" onClick={() => setMenuOpen(false)}>Especiais</NavLink>
+          </li>
+          <li>
+            <NavLink to="/none" onClick={() => setMenuOpen(false)}>Flow cards</NavLink>
+          </li>
+          <li>
+            <NavLink to="/none" onClick={() => setMenuOpen(false)}>Flow store</NavLink>
+          </li>
+          <li>
+            <NavLink to="/none" onClick={() => setMenuOpen(false)}>Flow ping</NavLink>
+          </li>
         </Element.Menu>
 
-        {/* FUNDO AO ABRIR MOBILE MENU */}
         <Element.Backdrop $isOpen={menuOpen} onClick={() => setMenuOpen(false)} />
 
-        {/* MOBILE MENU */}
         <Element.MobileMenu $isOpen={menuOpen}>
-        <li>Noticias</li>
-          <li>Reviews</li>
-          <li>Games</li>
-          <li>Esports</li>
-          <li>Cultura pop</li>
-          <li>Low games</li>
-          <li>Especiais</li>
-          <li>Flow cards</li>
-          <li>Flow store</li>
-          <li>Flow ping</li>
+        <li>
+            <NavLink to="/" onClick={() => setMenuOpen(false)}>Menu</NavLink>
+          </li>
+          <li>
+            <NavLink to="/tabela" onClick={() => setMenuOpen(false)}>Tabela</NavLink>
+          </li>
+          <li>
+            <NavLink to="/none" onClick={() => setMenuOpen(false)}>Games</NavLink>
+          </li>
+          <li>
+            <NavLink to="/none" onClick={() => setMenuOpen(false)}>Esports</NavLink>
+          </li>
+          <li>
+            <NavLink to="/none" onClick={() => setMenuOpen(false)}>Cultura pop</NavLink>
+          </li>
+          <li>
+            <NavLink to="/none" onClick={() => setMenuOpen(false)}>Low games</NavLink>
+          </li>
+          <li>
+            <NavLink to="/none" onClick={() => setMenuOpen(false)}>Especiais</NavLink>
+          </li>
+          <li>
+            <NavLink to="/none" onClick={() => setMenuOpen(false)}>Flow cards</NavLink>
+          </li>
+          <li>
+            <NavLink to="/none" onClick={() => setMenuOpen(false)}>Flow store</NavLink>
+          </li>
+          <li>
+            <NavLink to="/none" onClick={() => setMenuOpen(false)}>Flow ping</NavLink>
+          </li>
         </Element.MobileMenu>
         </Element.HeaderContent>
     </Element.Root>
