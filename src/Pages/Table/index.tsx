@@ -1,12 +1,18 @@
 import * as Element from "./styles"
-
+import Interestelar from "../../assets/Interestelar.jpg"
 
 export function Table() {
   return (
     <Element.Root>
       <Element.Aside>
-        <h1>aside</h1>
+        <Element.Profile>
+          <img src={Interestelar} />
+          <h1>Amelia Brand</h1>
+          <span>Anne Hathaway</span>
+          <Element.Line />
+        </Element.Profile>
       </Element.Aside>
+
       <Element.Header>
         <h1>header</h1>
       </Element.Header>
