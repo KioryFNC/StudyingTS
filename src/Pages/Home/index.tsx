@@ -1,6 +1,6 @@
-import { Games } from "../components/Games"
-import { Grid } from "../components/Grid"
-import { UserCard } from "../components/UserCard"
+import { Games } from "../../components/Games"
+import { Grid } from "../../components/Grid"
+import { UserCard } from "../../components/UserCard"
 import * as Element from "./styles"
 
 export function Home() {

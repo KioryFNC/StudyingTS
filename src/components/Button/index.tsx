@@ -3,27 +3,23 @@ import * as Element from './styles'
 
 
 export function Button() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleButtonClick = () => {
-    setIsOpen(true)
+  const [isOpen, setIsOpen] = useState(false)
+  const toggleModal = () => {
+    setIsOpen(prev => !prev)
   }
 
-  const handleClose = () => {
-    setIsOpen(false)
-  }
   return (
     <>
-      <Element.Button onClick={handleButtonClick}>
-        open
+      <Element.Button onClick={toggleModal}>
+        {isOpen ? 'Close' : 'Open'}
       </Element.Button>
 
       {isOpen && (
-        <Element.ModalOverlay>
-          <Element.ModalContent className={isOpen ? 'open' : ''}>
+        <Element.ModalOverlay onClick={toggleModal} aria-hidden={!isOpen}>
+          <Element.ModalContent onClick={(e) => e.stopPropagation()}>
             <h2>Conteúdo da Div</h2>
             <p>Texto ou outros componentes dentro da div</p>
-            <button onClick={handleClose}>Fechar</button>
+            <button onClick={toggleModal}>Fechar</button>
           </Element.ModalContent>
         </Element.ModalOverlay>
       )}

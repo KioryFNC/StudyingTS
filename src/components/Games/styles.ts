@@ -27,7 +27,6 @@ export const Buttons = styled.div`
   width: fit-content;
   display: flex;
   margin-bottom: 2rem;
-  gap: 1rem;
   justify-content: center;
   align-items: center;
   border: none;
