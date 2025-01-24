@@ -55,6 +55,10 @@ export const Line = styled.div`
   background: linear-gradient(90deg, rgb(240, 67, 139) 0%, #8b5cf6 100%);
 `
 
+export const Navigation = styled.div`
+
+`
+
 
 export const Header = styled.div`
   grid-column: 2;

@@ -1,5 +1,6 @@
 import * as Element from "./styles"
 import Interestelar from "../../assets/Interestelar.jpg"
+import { NavLink } from "react-router-dom"
 
 export function Table() {
   return (
@@ -11,6 +12,11 @@ export function Table() {
           <span>Anne Hathaway</span>
           <Element.Line />
         </Element.Profile>
+        <Element.Navigation>
+          <li>
+            <NavLink to='/'></NavLink>
+          </li>
+        </Element.Navigation>
       </Element.Aside>
 
       <Element.Header>
