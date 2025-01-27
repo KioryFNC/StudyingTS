@@ -1,8 +1,13 @@
 import * as Element from "./styles"
 import Interestelar from "../../assets/Interestelar.jpg"
-import { NavLink } from "react-router-dom"
+import { NavLink, useLocation } from "react-router-dom"
 
 export function Table() {
+  const location = useLocation()
+
+  const isDashboardActive = location.pathname === "/tabela/dashboard"
+  const isMoviesActive = location.pathname === "/tabela/filmes"
+
   return (
     <Element.Root>
       <Element.Aside>
@@ -13,10 +18,10 @@ export function Table() {
           <Element.Line />
         </Element.Profile>
         <Element.Navigation>
-          <li>
+          <li className={isDashboardActive ? "active" : ""}>
             <NavLink to='/tabela/dashboard'>Dashboard</NavLink>
           </li>
-          <li>
+          <li className={isMoviesActive ? "active" : ""}>
             <NavLink to='/tabela/filmes'>Filmes</NavLink>
           </li>
         </Element.Navigation>
@@ -27,7 +32,18 @@ export function Table() {
       </Element.Header>
 
       <Element.Table>
-        <h1>table</h1>
+        {isDashboardActive && (
+          <Element.Dashboard>
+            <h2>dashboard</h2>
+            <p>Bem-vindo à página de Dashboard!</p>
+          </Element.Dashboard>
+        )}
+        {isMoviesActive && (
+          <Element.Movies>
+            <h2>Filmes</h2>
+            <p>welcome to the movies page</p>
+          </Element.Movies>          
+        )}
       </Element.Table>
     </Element.Root>
   )

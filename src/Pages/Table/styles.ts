@@ -10,16 +10,17 @@ export const Root = styled.div`
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #CCC;
+  background: transparent;
   `
 export const Aside = styled.div`
   grid-column: 1; 
   grid-row: 1 / 3; 
-  background: #e0e0e0;
+  background: ${(props) => props.theme['gray-500']};
   padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 8px 0 0 8px;
 `;
 
 export const Profile = styled.div`
@@ -41,6 +42,7 @@ export const Profile = styled.div`
   h1 {
     font-size: 2.2rem;
     font-weight: 600;
+    color: white;
   }
   
   span {
@@ -107,9 +109,10 @@ export const Navigation = styled.ul`
 export const Header = styled.div`
   grid-column: 2;
   grid-row: 1; 
-  background:rgb(184, 30, 30);
   padding: 1rem;
-`;
+  border-radius: 0 8px 0 0;
+  background: linear-gradient(90deg, rgb(240, 67, 139) 0%, #8b5cf6 100%);
+`
 
 export const Table = styled.div`
   grid-column: 2; 
@@ -117,4 +120,11 @@ export const Table = styled.div`
   background: #ffffff;
   padding: 1rem;
   overflow-y: auto;
-`;
+  border-radius: 0 0 8px 0;
+`
+
+export const Dashboard = styled.div`
+`
+
+export const Movies = styled.div`
+`
