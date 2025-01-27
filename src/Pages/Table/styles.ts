@@ -17,6 +17,9 @@ export const Aside = styled.div`
   grid-row: 1 / 3; 
   background: #e0e0e0;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const Profile = styled.div`
@@ -55,8 +58,49 @@ export const Line = styled.div`
   background: linear-gradient(90deg, rgb(240, 67, 139) 0%, #8b5cf6 100%);
 `
 
-export const Navigation = styled.div`
+export const Navigation = styled.ul`
+  width: 30rem;
+  display: flex;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.4rem;
+  list-style: none;
+  
+  >li {
+    font-size: 2rem;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background: linear-gradient(90deg, rgb(240, 67, 139) 0%, #8b5cf6 100%);
+    cursor: pointer;
+    
+    &:hover {
+      box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+      transform: scale(1.02);
+    }
 
+    &:active {
+      transform: scale(1);
+    }
+    
+    a {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: ${(props) => props.theme['white']} ;
+    }
+  }
 `
 
 

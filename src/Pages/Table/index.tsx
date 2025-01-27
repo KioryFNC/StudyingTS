@@ -14,7 +14,10 @@ export function Table() {
         </Element.Profile>
         <Element.Navigation>
           <li>
-            <NavLink to='/'></NavLink>
+            <NavLink to='/tabela/dashboard'>Dashboard</NavLink>
+          </li>
+          <li>
+            <NavLink to='/tabela/filmes'>Filmes</NavLink>
           </li>
         </Element.Navigation>
       </Element.Aside>
