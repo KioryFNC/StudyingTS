@@ -20,7 +20,7 @@ export const Root = styled.div`
 export const Aside = styled.div`
   grid-column: 1; 
   grid-row: 1 / 3; 
-  background: ${(props) => props.theme['gray-500']};
+  background: ${(props) => props.theme['gray-700']};
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -133,7 +133,7 @@ export const Header = styled.div`
   grid-row: 1; 
   padding: 1rem;
   border-radius: 0 8px 0 0;
-  background: linear-gradient(90deg, rgb(240, 67, 139) 0%, #8b5cf6 100%);
+  background: ${(props) => props.theme['gray-700']};
 
   `
 
@@ -156,14 +156,51 @@ export const HeaderTitle = styled.div`
 export const Table = styled.div`
   grid-column: 2; 
   grid-row: 2; 
-  background:rgb(207, 224, 184);
+  background: ${(props) => props.theme['gray-500']};
   padding: 1rem;
   overflow-y: auto;
   border-radius: 0 0 8px 0;
 `
 
 export const Dashboard = styled.div`
+  > svg {
+    fill: red;
+  }
+
 `
 
 export const Movies = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    background: ${(props) => props.theme['wine-500']};
+
+    &:hover {
+      transform: scale(1.05);
+    }
+    
+    img {
+      width: 100%;
+      max-width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin: 0 auto 0.5rem;
+    }
+    span {
+      font-size: 1.6rem;
+      color: white;
+    }
+  }
 `
