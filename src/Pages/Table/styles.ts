@@ -156,7 +156,7 @@ export const HeaderTitle = styled.div`
 export const Table = styled.div`
   grid-column: 2; 
   grid-row: 2; 
-  background: #ffffff;
+  background:rgb(207, 224, 184);
   padding: 1rem;
   overflow-y: auto;
   border-radius: 0 0 8px 0;

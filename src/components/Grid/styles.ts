@@ -25,11 +25,23 @@ export const Title = styled.div`
     font-size: 6rem;
     position: relative;
     z-index: 1;
+
     >span {
       background: linear-gradient(90deg,rgb(240, 67, 139) 0%, #8b5cf6 100%);
       background-clip: text;
       -webkit-background-clip: text; /* Aplica o gradiente apenas ao texto mas tem que usar a função em baixo tambem */
       -webkit-text-fill-color: transparent;
+    }
+  }
+  @media (max-width: 600px) {
+    padding: 0 5rem;
+    > h1 {
+      font-size: 5rem;
+    }
+  }
+  @media (max-width: 450px) {
+    > h1 {
+      font-size: 4rem;
     }
   }
 

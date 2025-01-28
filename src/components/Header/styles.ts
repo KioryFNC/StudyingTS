@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-// ROOT - Estrutura principal do Header
 export const Root = styled.div`
   position: static;
   top: 0;
