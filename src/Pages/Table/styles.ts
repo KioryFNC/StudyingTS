@@ -143,7 +143,7 @@ export const HeaderTitle = styled.div`
   gap: 1rem;
 
   > svg {
-    color: yellow;
+    fill: yellow;
   }
 
   > h1 {
@@ -163,8 +163,33 @@ export const Table = styled.div`
 `
 
 export const Dashboard = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+
   > svg {
     fill: red;
+    width: 6rem;
+    height: 6rem;
+  }
+
+  > h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    span {
+      background: linear-gradient(90deg, rgb(240, 67, 139) 0%, #8b5cf6 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 
 `

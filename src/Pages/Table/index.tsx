@@ -17,6 +17,12 @@ interface Movie {
   name: string;
   img: string;
 }
+
+const userInfo = {
+  name: "Yuri",
+  profession: "Web Developer",
+  img: MySelf,
+}
 export function Table() {
   const location = useLocation()
 
@@ -74,10 +80,10 @@ export function Table() {
   return (
     <Element.Root>
       <Element.Aside>
-        <Element.Profile>
-            <img src={MySelf} />
-          <h1>Yuri</h1>
-          <span>Web Developer</span>
+        <Element.Profile {...userInfo}>
+          <img src={userInfo.img} />
+          <h1>{userInfo.name}</h1>
+          <span>{userInfo.profession}</span>
           <Element.Line />
         </Element.Profile>
         <Element.Navigation>
@@ -94,7 +100,7 @@ export function Table() {
 
       <Element.Header>
         <Element.HeaderTitle>
-          <Star />
+          <Star weight="fill"/>
           <h1>Favorites</h1>
         </Element.HeaderTitle>
         
@@ -103,7 +109,7 @@ export function Table() {
       <Element.Table>
         {isDashboardActive && (
           <Element.Dashboard>
-            <HeartStraight />
+            <HeartStraight weight="fill"/>
             <h2>Select a category to see <span>favorite hobbies</span></h2>
           </Element.Dashboard>
         )}
