@@ -1,4 +1,16 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const fadeInUp = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+`
 
 export const Root = styled.div`
   position: absolute;
@@ -6,7 +18,7 @@ export const Root = styled.div`
   grid-template-columns: 1fr 2fr;
   grid-template-rows: auto 1fr;
   width: 120rem;
-  height: 70rem;
+  height: 75rem;
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -35,6 +47,21 @@ export const Profile = styled.div`
   gap: .5rem;
   justify-content: center;
   padding: 2rem;
+  opacity: 0;
+    transform: translateY(20px);
+    animation: ${fadeInUp} 0.5s ease-out forwards;
+
+    &:nth-child(1) {
+      animation-delay: 0.2s;
+    }
+
+    &:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 0.5s;
+    }
   
   img {
     width: 25rem;
@@ -75,6 +102,7 @@ export const Navigation = styled.ul`
   gap: 1.4rem;
   list-style: none;
   
+  
   >li {
     font-size: 2rem;
     width: 100%;
@@ -88,6 +116,17 @@ export const Navigation = styled.ul`
     transition: box-shadow 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
     background: linear-gradient(90deg, rgb(240, 67, 139) 0%, #8b5cf6 100%);
     cursor: pointer;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: ${fadeInUp} 0.5s ease-out forwards;
+
+    &:nth-child(1) {
+      animation-delay: 0.3s;
+    }
+
+    &:nth-child(2) {
+      animation-delay: 0.5s;
+    }
     
     &:hover {
       box-shadow: 0px 6px 8px rgba(255, 255, 255, 0.3);
@@ -95,7 +134,7 @@ export const Navigation = styled.ul`
     }
 
     &:active {
-      transform: scale(1);
+      transform: scale(1.1);
     }
     svg {
       color: ${(props) => props.theme['white']};
@@ -175,6 +214,7 @@ export const Dashboard = styled.div`
     fill: red;
     width: 6rem;
     height: 6rem;
+    animation: ${fadeInUp} 0.6s ease-out;
   }
 
   > h2 {
@@ -183,6 +223,7 @@ export const Dashboard = styled.div`
     align-items: center;
     justify-content: center;
     color: white;
+    animation: ${fadeInUp} 0.8s ease-out;
 
     span {
       background: linear-gradient(90deg, rgb(240, 67, 139) 0%, #8b5cf6 100%);
@@ -210,9 +251,49 @@ export const Movies = styled.div`
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
     background: ${(props) => props.theme['wine-500']};
+    opacity: 0;
+    transform: translateY(20px);
+    animation: ${fadeInUp} 0.5s ease-out forwards;
+
+    &:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+
+    &:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+
+    &:nth-child(4) {
+      animation-delay: 0.4s;
+    }
+
+    &:nth-child(5) {
+      animation-delay: 0.5s;
+    }
+
+    &:nth-child(6) {
+      animation-delay: 0.6s;
+    }
+
+    &:nth-child(7) {
+      animation-delay: 0.7s;
+    }
+
+    &:nth-child(8) {
+      animation-delay: 0.8s;
+    }
+
+    &:nth-child(9) {
+      animation-delay: 0.9s;
+    }
 
     &:hover {
-      transform: scale(1.05);
+      transform: translateY(0) scale(1.1);
+      transition: transform 0.3s ease;
     }
     
     img {
@@ -222,9 +303,13 @@ export const Movies = styled.div`
       object-fit: cover;
       border-radius: 8px;
       margin: 0 auto 0.5rem;
+      &:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+      }
     }
     span {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       color: white;
     }
   }

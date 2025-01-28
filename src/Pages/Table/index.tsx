@@ -1,5 +1,5 @@
 import * as Element from "./styles"
-import { NavLink, useLocation } from "react-router-dom"
+import { NavLink, useLocation, useNavigate } from "react-router-dom"
 import { FilmSlate, HeartStraight, House, Star } from "phosphor-react"
 import MySelf from "../../assets/myself.jpg"
 import InterestelarMovie from "../../assets/InterestelarMovie.jpg"
@@ -11,6 +11,7 @@ import TwelveAngryMen from "../../assets/12HomensEUmaSentença.jpg"
 import SchindelersList from "../../assets/Schindler'sList.jpg"
 import SevenMovie from "../../assets/SevenMovie.jpg"
 import SixiemeSens from "../../assets/sixismeSens.webp"
+import { useEffect } from "react"
 
 interface Movie {
   id: number;
@@ -23,11 +24,19 @@ const userInfo = {
   profession: "Web Developer",
   img: MySelf,
 }
+
 export function Table() {
   const location = useLocation()
+  const navigate = useNavigate()
 
   const isDashboardActive = location.pathname === "/tabela/dashboard"
   const isMoviesActive = location.pathname === "/tabela/filmes"
+
+  useEffect(() => {
+    if (location.pathname === "/tabela") {
+      navigate("/tabela/dashboard")
+    }
+  }, [location.pathname, navigate])
 
   const movies: Movie[] = [
     {
@@ -111,6 +120,7 @@ export function Table() {
           <Element.Dashboard>
             <HeartStraight weight="fill"/>
             <h2>Select a category to see <span>favorite hobbies</span></h2>
+            <HeartStraight weight="fill"/>
           </Element.Dashboard>
         )}
         {isMoviesActive && (
