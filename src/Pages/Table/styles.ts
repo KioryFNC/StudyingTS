@@ -11,6 +11,11 @@ export const Root = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   background: transparent;
+
+  svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
   `
 export const Aside = styled.div`
   grid-column: 1; 
@@ -77,20 +82,36 @@ export const Navigation = styled.ul`
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0 1rem;
     border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.2);
     transition: box-shadow 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
     background: linear-gradient(90deg, rgb(240, 67, 139) 0%, #8b5cf6 100%);
     cursor: pointer;
     
     &:hover {
-      box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 6px 8px rgba(255, 255, 255, 0.3);
       transform: scale(1.02);
     }
 
     &:active {
       transform: scale(1);
     }
+    svg {
+      color: ${(props) => props.theme['white']};
+      transition: color 0.3s;
+    }
+
+    &.active {
+      svg {
+        color: ${(props) => props.theme['wine-700']}; /* Cor do ícone ativo */
+      }
+
+      a {
+        color: ${(props) => props.theme['wine-700']}; /* Cor do texto ativo */
+      }
+    }
+
     
     a {
       width: 100%;
@@ -101,6 +122,7 @@ export const Navigation = styled.ul`
       justify-content: center;
       text-decoration: none;
       color: ${(props) => props.theme['white']} ;
+      transition: color 0.3s;
     }
   }
 `
@@ -112,6 +134,23 @@ export const Header = styled.div`
   padding: 1rem;
   border-radius: 0 8px 0 0;
   background: linear-gradient(90deg, rgb(240, 67, 139) 0%, #8b5cf6 100%);
+
+  `
+
+export const HeaderTitle = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  > svg {
+    color: yellow;
+  }
+
+  > h1 {
+    font-size: 2.4rem;
+    color: white;
+    text-transform: uppercase;
+  }
 `
 
 export const Table = styled.div`

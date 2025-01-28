@@ -1,6 +1,8 @@
 import * as Element from "./styles"
 import Interestelar from "../../assets/Interestelar.jpg"
 import { NavLink, useLocation } from "react-router-dom"
+import { FilmSlate, House, Star } from "phosphor-react"
+
 
 export function Table() {
   const location = useLocation()
@@ -12,23 +14,29 @@ export function Table() {
     <Element.Root>
       <Element.Aside>
         <Element.Profile>
-          <img src={Interestelar} />
+            <img src={Interestelar} />
           <h1>Amelia Brand</h1>
           <span>Anne Hathaway</span>
           <Element.Line />
         </Element.Profile>
         <Element.Navigation>
           <li className={isDashboardActive ? "active" : ""}>
+            <House />
             <NavLink to='/tabela/dashboard'>Dashboard</NavLink>
           </li>
           <li className={isMoviesActive ? "active" : ""}>
+            <FilmSlate />
             <NavLink to='/tabela/filmes'>Filmes</NavLink>
           </li>
         </Element.Navigation>
       </Element.Aside>
 
       <Element.Header>
-        <h1>header</h1>
+        <Element.HeaderTitle>
+          <Star />
+          <h1>Interestelar</h1>
+        </Element.HeaderTitle>
+        
       </Element.Header>
 
       <Element.Table>
