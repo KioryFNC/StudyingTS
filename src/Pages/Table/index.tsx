@@ -1,6 +1,6 @@
 import * as Element from "./styles"
 import { NavLink, useLocation, useNavigate } from "react-router-dom"
-import { FilmSlate, HeartStraight, House, Star } from "phosphor-react"
+import { FilmSlate, GameController, HeartStraight, House, MusicNotes, Star } from "phosphor-react"
 import MySelf from "../../assets/myself.jpg"
 import InterestelarMovie from "../../assets/InterestelarMovie.jpg"
 import SignsMovie from "../../assets/signsMovie.jpg"
@@ -31,6 +31,8 @@ export function Table() {
 
   const isDashboardActive = location.pathname === "/tabela/dashboard"
   const isMoviesActive = location.pathname === "/tabela/filmes"
+  const isGamesActive = location.pathname === "/tabela/jogos"
+  const isMusicsActive = location.pathname === "/tabela/musicas"
 
   useEffect(() => {
     if (location.pathname === "/tabela") {
@@ -101,8 +103,16 @@ export function Table() {
             <NavLink to='/tabela/dashboard'>Dashboard</NavLink>
           </li>
           <li className={isMoviesActive ? "active" : ""}>
+            <GameController />
+            <NavLink to='/tabela/filmes'>Movies</NavLink>
+          </li>
+          <li className={isGamesActive ? "active" : ""}>
             <FilmSlate />
-            <NavLink to='/tabela/filmes'>Filmes</NavLink>
+            <NavLink to='/tabela/jogos'>Games</NavLink>
+          </li>
+          <li className={isMusicsActive ? "active" : ""}>
+            <MusicNotes />
+            <NavLink to='/tabela/musicas'>Musics</NavLink>
           </li>
         </Element.Navigation>
       </Element.Aside>

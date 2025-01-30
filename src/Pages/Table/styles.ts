@@ -128,6 +128,13 @@ export const Navigation = styled.ul`
       animation-delay: 0.5s;
     }
     
+    &:nth-child(3) {
+      animation-delay: 0.7s;
+    }
+    &:nth-child(4) {
+      animation-delay: 0.9s;
+    }
+    
     &:hover {
       box-shadow: 0px 6px 8px rgba(255, 255, 255, 0.3);
       transform: scale(1.02);

@@ -11,6 +11,8 @@ export function Router() {
         <Route path="/tabela" element={<Table />}/>
         <Route path="/tabela/dashboard" element={<Table />}/>
         <Route path="/tabela/filmes" element={<Table />}/>
+        <Route path="/tabela/jogos" element={<Table />}/>
+        <Route path="/tabela/musicas" element={<Table />}/>
       </Route>
     </Routes>
   )
